@@ -16,7 +16,7 @@ h2 {
 
 select {
   display: block;
-  width: 100%;
+  width: 615px;
   font-size: 18px;
   border-radius: 9px;
   padding: 10px;
@@ -36,7 +36,7 @@ select {
   margin: 10px 0;
   justify-content: space-between;
   padding: 30px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  
 }
 
 .city:last-child {
@@ -59,7 +59,46 @@ select {
 }
 
 footer {
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.7;
   text-align: center;
-  font-size: 18px;
+  font-size: 12px;
   color: rgba(0, 0, 0, 0.8);
+  margin-top: 30px;
+}
+
+/* CSS */
+.slide-to-delete {
+  position: relative;
+  width: 600px;
+  /* Adjust as needed */
+  height: 100px;
+  /* Adjust as needed */
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 6px;
+ padding: 4px;
+  
+}
+
+.slide-to-delete:hover{
+  background-color: #f0f0f0;
+}
+
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  /* Hide initially */
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.slide-to-delete:hover .delete-button {
+  right: 0;
+  /* Show delete button on hover */
 }
