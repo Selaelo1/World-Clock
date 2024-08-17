@@ -1,20 +1,21 @@
+
+
 function updateTime() {
-  // Update time for all cities
   let cities = document.querySelectorAll('.city');
   cities.forEach((city) => {
     let cityTimeZone = city.querySelector('h2').getAttribute('data-timezone');
-    if (cityTimeZone) {
-      let cityTimeElement = city.querySelector(".time");
-      let cityDateElement = city.querySelector(".date");
-      let cityTime = moment().tz(cityTimeZone);
-      if (cityTime) {
-        cityTimeElement.innerHTML = cityTime.format("h:mm:ss A");
-        cityDateElement.innerHTML = cityTime.format("MMMM Do, YYYY");
-      }
-    }
+    let cityTimeElement = city.querySelector(".time");
+    let cityDateElement = city.querySelector(".date");
+    let cityTime = moment().tz(cityTimeZone).format("h:mm:ss A");
+    let cityDate = moment().tz(cityTimeZone).format("MMMM Do, YYYY");
+    cityTimeElement.innerHTML = cityTime;
+    cityDateElement.innerHTML = cityDate;
   });
   setTimeout(updateTime, 1000);
 }
+
+
+
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
