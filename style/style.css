@@ -20,11 +20,9 @@ h2 {
   color: #000000;
 }
 
-
 select {
   display: block;
   width: 100%;
-  /* Changed from 90% to 100% */
   text-align: center;
   font-size: 1.2vw;
   border-radius: 9px;
@@ -32,12 +30,12 @@ select {
   opacity: 0.7;
   border: 1px solid;
   margin: 0 auto;
-  }
+}
 
 .container {
   max-width: 600px;
   margin: 60px auto;
- opacity: 0.7;
+  opacity: 0.7;
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
@@ -82,13 +80,14 @@ footer {
   margin-top: 30px;
   border-top: 1px solid #f0f0f0;
 }
-footer a{
+
+footer a {
   color: white;
 }
 
 .slide-to-delete {
   position: relative;
-  width: 600px;
+  width: 582px;
   height: 100px;
   border-radius: 6px;
   overflow: hidden;
@@ -99,7 +98,7 @@ footer a{
 }
 
 .slide-to-delete:hover {
-  background-color: #f0f0f0;  
+  background-color: #f0f0f0;
 }
 
 .delete-button {
@@ -132,4 +131,114 @@ button {
 
 button:hover {
   background-color: #0069d9;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  select {
+    font-size: 1vw;
+  }
+
+  .city {
+    padding: 20px 0;
+  }
+
+  .time {
+    font-size: 36px;
+  }
+
+  .time small {
+    font-size: 18px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  select {
+    font-size: 0.8vw;
+  }
+
+  .city {
+    padding: 15px 0;
+  }
+
+  .time {
+    font-size: 28px;
+  }
+
+  .time small {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  select {
+    font-size: 0.6vw;
+  }
+
+  .city {
+    padding: 10px 0;
+  }
+
+  .time {
+    font-size: 20px;
+  }
+
+  .time small {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+
+  .slide-to-delete {
+    width: 100%;
+  }
 }
