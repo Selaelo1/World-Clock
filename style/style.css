@@ -133,8 +133,6 @@ button:hover {
   background-color: #0069d9;
 }
 
-/* Media Queries */
-
 @media screen and (max-width: 768px) {
   .container {
     max-width: 90%;
